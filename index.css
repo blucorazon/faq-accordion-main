@@ -17,7 +17,7 @@ body {
 
     /* Width of accordion container */
     width: 75%;
-    max-width: 100%;
+    max-width: 425px;
 
     /* These two lines center the container horizontally */
     margin-left: auto;
@@ -61,7 +61,7 @@ body {
 /* Placed every accordion title in a flex box to align every plus/minus with the question */
 .accordion-title {
     display: flex;
-
+    gap: 1rem;
     /* Puts space between each element in the flexbox, pushing everything to its respective edge */
     justify-content: space-between;
 
@@ -69,7 +69,7 @@ body {
     h2 {
         color: hsl(292, 42%, 14%);
         font-weight: 600;
-        font-size: 1.1em;
+        font-size: .95em;
     }
 
     /* Styles for the buttons on the title */
@@ -78,14 +78,20 @@ body {
     }
 }
 
+h2:hover {
+    color: hsl(292, 66%, 56%);
+}
+
 .accordion-content {
 
     /* Styles for the answers in the accordion */
     p {
         color: hsl(292, 16%, 49%);
+        /* By default the content is hidden */
+        display: none;
         font-size: .85rem;
         font-weight: 400;
-        margin-top: 1.25rem;
+        margin-top: .5rem;
     }
 }
 
