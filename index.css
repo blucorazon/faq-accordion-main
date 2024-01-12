@@ -1,0 +1,102 @@
+body {
+    background-color: hsl(275, 100%, 97%);
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.background-image {
+    /* These first three lines make it so my background image fills the entire screen */
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Styles for the entire Accordion container */
+.accordion-container {
+    background-color: white;
+
+    /* Width of accordion container */
+    width: 75%;
+    max-width: 100%;
+
+    /* These two lines center the container horizontally */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* top | right and left | bottom */
+    padding: 0rem 1rem 1rem;
+
+    /* These two lines allow shifting of the element's position relative to its current place. */
+    position: relative;
+    top: -100px;
+
+    /* Rounds the corners of the container */
+    border-radius: 10px / 10px;
+
+}
+
+/* Styles for the FAQ header and star icon */
+.accordion-header {
+    /* This takes the elements from a vertical display and places them in a flex box next to each other */
+    display: flex;
+    gap: 1.25rem;
+
+    /* Styles for FAQ star icon */
+    .star-icon {
+        max-width: 2rem;
+    }
+
+    /* Font styles for FAQ header */
+    h1 {
+        color: hsl(292, 42%, 14%);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+/* Used this syntax to exclude certain classes from this rule */
+.accordion-section:not(.last-question) {
+    border-bottom: 1.5px solid rgb(233, 230, 230);
+}
+
+/* Placed every accordion title in a flex box to align every plus/minus with the question */
+.accordion-title {
+    display: flex;
+
+    /* Puts space between each element in the flexbox, pushing everything to its respective edge */
+    justify-content: space-between;
+
+    /* Styles for the questions in the accordion */
+    h2 {
+        color: hsl(292, 42%, 14%);
+        font-weight: 600;
+        font-size: 1.1em;
+        margin: ;
+    }
+
+    /* Styles for the buttons on the title */
+    .minus-icon {
+        display: none;
+    }
+}
+
+.accordion-content {
+
+    /* Styles for the answers in the accordion */
+    p {
+        color: hsl(292, 16%, 49%);
+        font-size: .85rem;
+        font-weight: 400;
+        margin-top: 1.25rem;
+    }
+}
+
+/* Styles for the footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
